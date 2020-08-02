@@ -15,9 +15,9 @@ SO THAT I can plan a trip accordingly
 ## Acceptance Criteria
 
 ```
-[]GIVEN a weather dashboard with 
-[]form input(s)?
-[]WHEN I search for a city
+[X]GIVEN a weather dashboard with 
+[X]form input(s)?
+[X]WHEN I search for a city
 []THEN I am presented with 
 []current and 
 []future conditions for that city and 
@@ -80,3 +80,12 @@ Created a function to retrieve weather conditions for the city from the user inp
 At first, only the weather conditions for Moscow were logging to the console.  Discovered that the example url from the openweathermap documentation included the city code for Moscow (524901) hard-coded in the query.
 
 Changed the API call from `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={YOUR API KEY}` to "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID={YOUR API KEY}".
+
+Adventures with github...
+Created the repo without a readme, because I had already written all of the above.  Committed a folder within a folder, and then had to delete the repo, create a new one, and re-commit the files without a folder.  Lesson learned!
+
+8/2
+
+Added classes to html content, so that I will be able to access each one from `script.js` using JQuery.
+
+Moved the function from `index.html` to `script.js` in order to check 

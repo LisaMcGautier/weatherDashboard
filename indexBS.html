@@ -27,7 +27,7 @@
 
   <!-- http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=9f5f24e057e2a67d1f855db880415b67 -->
 
-  <div class="row col-12 p-3 mb-2 nav justify-content-center bg-primary text-white">Weather Dashboard</div>
+  <div class="row p-3 mb-2 nav justify-content-center bg-primary text-white">Weather Dashboard</div>
     <!-- <div class="col-12 p-3 mb-2 bg-primary text-white">Weather Dashboard</div>
   </div> -->
 
@@ -55,10 +55,26 @@
     <div class="row">
 
       <div class="col-3">
-        <input id="cityName" placeholder="Search by City" /> <button>Search</button>
+        <h3 class="search">Search for your city</h3>
+        <input id="cityName" placeholder="Search by City" /> <button class="searchBtn">Search</button>
+        <p class="history">Search History</p>
       </div>
 
-      <div class="col-8">Current City</div>
+      <div class="col-8">
+        <h1 class="city">Current City (date) (icon)</h1>
+        <p class="temp">Temperature: </p>
+        <p class="humidity">Humidity: </p>
+        <p class="wind">Wind Speed: </p>
+        <p class="uvi">UV Index: </p>
+
+        <br>
+
+        <h3>5-day Forecast: </h3>
+        
+
+
+
+      </div>
 
     </div>
   </div>
@@ -75,30 +91,30 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript">
 
-    function getWeather(city) {
-      var city;
-      var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=9f5f24e057e2a67d1f855db880415b67";
+    // function getWeather(city) {
+    //   var city;
+    //   var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=9f5f24e057e2a67d1f855db880415b67";
 
-      $.ajax({
-        url: queryURL,
-        method: "GET"
-      }).then(function (response) {
+    //   $.ajax({
+    //     url: queryURL,
+    //     method: "GET"
+    //   }).then(function (response) {
 
-        console.log(response);
-      });
+    //     console.log(response);
+    //     console.log(response);
+        
+    //   });
 
-    };
+    // };
 
-    $("button").on("click", function() {
-      
-      city = $("#cityName").val();
-      getWeather(city);
+    // $("button").on("click", function() {
 
-    });
+    //   city = $("#cityName").val();
+    //   getWeather(city);
+
+    // });
 
   </script>
-
-
   
   <script src="script.js"></script>
 
