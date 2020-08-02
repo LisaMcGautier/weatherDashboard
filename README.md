@@ -24,19 +24,19 @@ SO THAT I can plan a trip accordingly
 []that city is added to the search history
 []WHEN I view current weather conditions for that city
 []THEN I am presented with 
-[]the city name, 
+[X]the city name, 
 []the date, 
 []an icon representation of weather conditions, 
 []the temperature, 
-[]the humidity, 
-[]the wind speed, 
+[X]the humidity, 
+[X]the wind speed, 
 []and the UV index
 []WHEN I view the UV index
 []THEN I am presented with a color that indicates whether the conditions are 
 []favorable, moderate, or severe
 []WHEN I view future weather conditions for that city
 []THEN I am presented with a 
-[]5-day forecast that displays 
+[X]5-day forecast that displays 
 []the date, 
 []an icon representation of weather conditions, 
 []the temperature, 
@@ -91,3 +91,5 @@ Added classes to html content, so that I will be able to access each one from `s
 Moved the function from `index.html` to `script.js` in order to confirm that it is working.
 
 Worked on the syntax of the JQuery to display the API response results dynamically within the HTML.
+
+Created the panels for the 5-day Forecast.  Converted degress Kelvin to Fahrenheit.

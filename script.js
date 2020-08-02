@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // getItem last city searched
 
     function getWeather(city) {
         var city;
@@ -11,33 +12,21 @@ $(document).ready(function () {
 
             console.log(response);
 
-            //   console.log(response.name);
-            //   var cityName = $("<h1>");
-            //   cityName.text(response.name);
-            //   $(".city").append(cityName);
-
             $(".city").text(response.name);
+            // Parse the date and add to Current City
+            // Add the current weather icon to Current City and date
 
-            //   console.log(response.main.temp);
-            //   var temp = $("<p>");
-            //   temp.text("Temperature: " + response.main.temp);
-            //   $(".temp").append(temp);
-
-            $(".temp").text("Temperature: " + response.main.temp + " ° K");
-
-            //   console.log(response.main.humidity);
-            //   var humidity = $("<p>");
-            //   temp.text("Humidity: " + response.main.humidity);
-            //   $(".humidity").append(humidity);
+            // $(".temp").text("Temperature: " + response.main.temp + " ° K");
+            // Convert to F
+            // F = (K - 273.15) * 1.80 + 32
+            $(".temp").text("Temperature: " + (Math.round(((response.main.temp - 273.15) * 1.80) + 32)) + " °F");
 
             $(".humidity").text("Humidity: " + response.main.humidity + "%");
 
-            //   console.log(response.wind.speed);
-            //   var wind = $("<p>");
-            //   wind.text("Wind Speed: " + response.wind.speed);
-            //   $(".wind").append(wind);
-
             $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
+            // Separate API call for UV Index 
+
+
 
         });
 
@@ -47,6 +36,10 @@ $(document).ready(function () {
 
         city = $("#citySearched").val();
         getWeather(city);
+        // prevent default
+        // function getForecast for 5-day Forecast
+        // setItem local Storage
+
 
     });
 
