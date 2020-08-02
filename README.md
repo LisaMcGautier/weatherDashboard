@@ -88,4 +88,6 @@ Created the repo without a readme, because I had already written all of the abov
 
 Added classes to html content, so that I will be able to access each one from `script.js` using JQuery.
 
-Moved the function from `index.html` to `script.js` in order to check 
+Moved the function from `index.html` to `script.js` in order to confirm that it is working.
+
+Worked on the syntax of the JQuery to display the API response results dynamically within the HTML.
