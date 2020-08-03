@@ -79,7 +79,7 @@ Created a function to retrieve weather conditions for the city from the user inp
 
 At first, only the weather conditions for Moscow were logging to the console.  Discovered that the example url from the openweathermap documentation included the city code for Moscow (524901) hard-coded in the query.
 
-Changed the API call from `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={YOUR API KEY}` to "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID={YOUR API KEY}".
+Changed the API call from http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={YOUR API KEY} to http://api.openweathermap.org/data/2.5/weather?q= + city + &APPID={YOUR API KEY}.
 
 Adventures with github...
 Created the repo without a readme, because I had already written all of the above.  Committed a folder within a folder, and then had to delete the repo, create a new one, and re-commit the files without a folder.  Lesson learned!
@@ -92,6 +92,15 @@ Moved the function from `index.html` to `script.js` in order to confirm that it 
 
 Worked on the syntax of the JQuery to display the API response results dynamically within the HTML.
 
-Created the panels for the 5-day Forecast.  Converted degress Kelvin to Fahrenheit.
+Created the panels for the 5-day Forecast.  Converted degress Kelvin to Fahrenheit (using the formula provided in this week's class activities).
 
 Added a second API call within the `getWeather` function to retrieve the UV Index based on the latitude and longitude from the first API response. Added Bootstrap classes to the UV Index element to reflect favorable, moderate, and severe conditions.
+
+Started working on how to convert the date from the API call to a readable format. (According to documentation, Open Weather Maps API uses unix UTC for the dt value.  Using google and stack overflow to find a way to convert to mm/dd/yyyy format.)
+
+8/3
+
+Created a function `getForecast` to perform API call and log results to the console.
+
+Navigated through the DOM to retrieve results for the date, icon, temperature, and humidity content for the 5-day forecast.
+
