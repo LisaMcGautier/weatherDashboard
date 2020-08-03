@@ -23,7 +23,7 @@ $(document).ready(function () {
 
             $(".temp").text("Temperature: " + (Math.round(((response.main.temp - 273.15) * 1.80) + 32)) + " °F");
 
-            $(".humidity").text("Humidity: " + response.main.humidity + "%");
+            $(".humidity").text("Humidity: " + response.main.humidity + " %");
 
             $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
 
@@ -71,41 +71,78 @@ $(document).ready(function () {
             method: "GET"
         }).then(function (response) {
 
-            console.log(response);
-            console.log(response.list[7]);
-            console.log(response.list[7].dt_txt);
-            console.log(response.list[7].weather[0].icon);
-            // console.log(response.list[7].main.temp);
-            console.log((Math.round(((response.list[7].main.temp - 273.15) * 1.80) + 32)) + " °F");
-            console.log(response.list[7].main.humidity + "%");
+            console.log(response);            
 
-            console.log(response.list[15]);
-            console.log(response.list[15].dt_txt);
-            console.log(response.list[15].weather[0].icon);
-            // console.log(response.list[15].main.temp);
-            console.log((Math.round(((response.list[15].main.temp - 273.15) * 1.80) + 32)) + " °F");
-            console.log(response.list[15].main.humidity + "%");
+            // console.log(response.list[7]);
+            // console.log(response.list[7].dt_txt);
+            // console.log(response.list[7].weather[0].icon);
+            // console.log((Math.round(((response.list[7].main.temp - 273.15) * 1.80) + 32)) + " °F");
+            // console.log(response.list[7].main.humidity + "%");
 
-            console.log(response.list[23]);
-            console.log(response.list[23].dt_txt);
-            console.log(response.list[23].weather[0].icon);
-            // console.log(response.list[23].main.temp);
-            console.log((Math.round(((response.list[23].main.temp - 273.15) * 1.80) + 32)) + " °F");
-            console.log(response.list[23].main.humidity + "%");
+            $(".date1").text(response.list[7].dt_txt);
 
-            console.log(response.list[31]);
-            console.log(response.list[31].dt_txt);
-            console.log(response.list[31].weather[0].icon);
-            // console.log(response.list[31].main.temp);
-            console.log((Math.round(((response.list[31].main.temp - 273.15) * 1.80) + 32)) + " °F");
-            console.log(response.list[31].main.humidity + "%");
+            $(".date1-icon").text(response.list[7].weather[0].icon);
 
-            console.log(response.list[39]);            
-            console.log(response.list[39].dt_txt);
-            console.log(response.list[39].weather[0].icon);
-            // console.log(response.list[39].main.temp);
-            console.log((Math.round(((response.list[39].main.temp - 273.15) * 1.80) + 32)) + " °F");
-            console.log(response.list[39].main.humidity + "%");
+            $(".date1-temp").text("Temp: " + (Math.round(((response.list[7].main.temp - 273.15) * 1.80) + 32)) + " °F");
+
+            $(".date1-hum").text("Hum: " + response.list[7].main.humidity + " %");
+
+
+            // console.log(response.list[15]);
+            // console.log(response.list[15].dt_txt);
+            // console.log(response.list[15].weather[0].icon);
+            // console.log((Math.round(((response.list[15].main.temp - 273.15) * 1.80) + 32)) + " °F");
+            // console.log(response.list[15].main.humidity + "%");
+
+            $(".date2").text(response.list[15].dt_txt);
+
+            $(".date2-icon").text(response.list[15].weather[0].icon);
+
+            $(".date2-temp").text("Temp: " + (Math.round(((response.list[15].main.temp - 273.15) * 1.80) + 32)) + " °F");
+
+            $(".date2-hum").text("Hum: " + response.list[15].main.humidity + " %");
+
+            // console.log(response.list[23]);
+            // console.log(response.list[23].dt_txt);
+            // console.log(response.list[23].weather[0].icon);
+            // console.log((Math.round(((response.list[23].main.temp - 273.15) * 1.80) + 32)) + " °F");
+            // console.log(response.list[23].main.humidity + "%");
+
+            $(".date3").text(response.list[23].dt_txt);
+
+            $(".date3-icon").text(response.list[23].weather[0].icon);
+
+            $(".date3-temp").text("Temp: " + (Math.round(((response.list[23].main.temp - 273.15) * 1.80) + 32)) + " °F");
+
+            $(".date3-hum").text("Hum: " + response.list[23].main.humidity + " %");
+
+            // console.log(response.list[31]);
+            // console.log(response.list[31].dt_txt);
+            // console.log(response.list[31].weather[0].icon);
+            // console.log((Math.round(((response.list[31].main.temp - 273.15) * 1.80) + 32)) + " °F");
+            // console.log(response.list[31].main.humidity + "%");
+
+            $(".date4").text(response.list[31].dt_txt);
+
+            $(".date4-icon").text(response.list[31].weather[0].icon);
+
+            $(".date4-temp").text("Temp: " + (Math.round(((response.list[31].main.temp - 273.15) * 1.80) + 32)) + " °F");
+
+            $(".date4-hum").text("Hum: " + response.list[31].main.humidity + " %");
+
+            // console.log(response.list[39]);            
+            // console.log(response.list[39].dt_txt);
+            // console.log(response.list[39].weather[0].icon);
+            // console.log((Math.round(((response.list[39].main.temp - 273.15) * 1.80) + 32)) + " °F");
+            // console.log(response.list[39].main.humidity + "%");
+
+            $(".date5").text(response.list[39].dt_txt);
+
+            $(".date5-icon").text(response.list[39].weather[0].icon);
+
+            $(".date5-temp").text("Temp: " + (Math.round(((response.list[39].main.temp - 273.15) * 1.80) + 32)) + " °F");
+
+            $(".date5-hum").text("Hum: " + response.list[39].main.humidity + " %");
 
         });
 
@@ -122,6 +159,7 @@ $(document).ready(function () {
         // console.log(response.list[23]);
         // console.log(response.list[31]);
         // console.log(response.list[39]);
+
         // setItem local Storage
 
 

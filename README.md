@@ -104,3 +104,5 @@ Created a function `getForecast` to perform API call and log results to the cons
 
 Navigated through the DOM to retrieve results for the date, icon, temperature, and humidity content for the 5-day forecast.
 
+Sent date, weather icon, temperature, and humidity results from the console to the HTML 5-day Forecast elements.
+
