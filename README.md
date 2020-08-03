@@ -19,7 +19,7 @@ SO THAT I can plan a trip accordingly
 [X]form input(s)?
 [X]WHEN I search for a city
 []THEN I am presented with 
-[]current and 
+[X]current and 
 []future conditions for that city and 
 []that city is added to the search history
 []WHEN I view current weather conditions for that city
@@ -27,13 +27,13 @@ SO THAT I can plan a trip accordingly
 [X]the city name, 
 []the date, 
 []an icon representation of weather conditions, 
-[]the temperature, 
+[X]the temperature, 
 [X]the humidity, 
 [X]the wind speed, 
-[]and the UV index
+[X]and the UV index
 []WHEN I view the UV index
 []THEN I am presented with a color that indicates whether the conditions are 
-[]favorable, moderate, or severe
+[X]favorable, moderate, or severe
 []WHEN I view future weather conditions for that city
 []THEN I am presented with a 
 [X]5-day forecast that displays 
@@ -93,3 +93,5 @@ Moved the function from `index.html` to `script.js` in order to confirm that it 
 Worked on the syntax of the JQuery to display the API response results dynamically within the HTML.
 
 Created the panels for the 5-day Forecast.  Converted degress Kelvin to Fahrenheit.
+
+Added a second API call within the `getWeather` function to retrieve the UV Index based on the latitude and longitude from the first API response. Added Bootstrap classes to the UV Index element to reflect favorable, moderate, and severe conditions.
