@@ -17,20 +17,47 @@ $(document).ready(function () {
 
             // $(".city").text(response.name);
             // Parse the date and add to Current City
-            console.log(response.dt);
+            // console.log(response.dt);
             // console.log((response.dt) * 1000);
 
             // Print the day date in MM/DD/YYYY format
             // console.log(moment(response.daily[i].dt,"X").format("MM/DD/YYYY"))
-            console.log(moment(response.dt,"X").format("MM/DD/YYYY"));
+            // console.log(moment(response.dt, "X").format("MM/DD/YYYY"));
             var date = moment(response.dt,"X").format("MM/DD/YYYY");
-            console.log(date);
+            // console.log(date);
 
-            $(".city").text(response.name + " (" + date + ") ");
+            // $(".city").text(response.name + " (" + date + ") ");
 
             // Add the current weather icon to Current City and date
             // $(".city").text(response.name + " (" + date + ") " + icon);
             // console.log(response.weather[0].icon);
+
+            var icon = $("<img>");
+
+            // var icon;
+            var iconcode = response.weather[0].icon;
+            var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            
+            icon.attr("src", iconurl);
+            // $("#iconurl").attr("src", iconurl);
+            // icon.attr("alt", "Weather Icon");
+            // console.log(icon);
+            console.log(iconcode);
+            console.log(iconurl);
+
+            $(".city").html(response.name + " (" + date + ") " + "<img id='iconurl' src='" + iconurl + "'>");
+
+
+
+            // <div id="icon"><img id="wicon" src="" alt="Weather icon"></div>
+            // var iconcode = a.weather[0].icon;
+            // var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            // $('#wicon').attr('src', iconurl);
+
+            // var iconcode = response.weather[0].icon;
+            // var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+            // $('#wicon').attr('src', iconurl);
+
 
 
             $(".temp").text("Temperature: " + (Math.round(((response.main.temp - 273.15) * 1.80) + 32)) + " °F");
@@ -93,12 +120,14 @@ $(document).ready(function () {
             // console.log(response.list[7].main.humidity + "%");
 
             // $(".date1").text(response.list[7].dt_txt);
-            console.log(response.list[7].dt);
+            // console.log(response.list[7].dt);
             var date1 = moment(response.list[7].dt,"X").format("MM/DD/YYYY");
-            console.log(date1);
+            // console.log(date1);
             $(".date1").text(date1);
 
             $(".date1-icon").text(response.list[7].weather[0].icon);
+            
+            $(".date1-icon").append(response.list[7].weather[0].icon);
 
             $(".date1-temp").text("Temp: " + (Math.round(((response.list[7].main.temp - 273.15) * 1.80) + 32)) + " °F");
 
@@ -112,9 +141,9 @@ $(document).ready(function () {
             // console.log(response.list[15].main.humidity + "%");
 
             // $(".date2").text(response.list[15].dt_txt);
-            console.log(response.list[15].dt);
+            // console.log(response.list[15].dt);
             var date2 = moment(response.list[15].dt,"X").format("MM/DD/YYYY");
-            console.log(date2);
+            // console.log(date2);
             $(".date2").text(date2);
 
             $(".date2-icon").text(response.list[15].weather[0].icon);
@@ -131,9 +160,9 @@ $(document).ready(function () {
             // console.log(response.list[23].main.humidity + "%");
 
             // $(".date3").text(response.list[23].dt_txt);
-            console.log(response.list[23].dt);
+            // console.log(response.list[23].dt);
             var date3 = moment(response.list[23].dt,"X").format("MM/DD/YYYY");
-            console.log(date3);
+            // console.log(date3);
             $(".date3").text(date3);
 
             $(".date3-icon").text(response.list[23].weather[0].icon);
@@ -150,9 +179,9 @@ $(document).ready(function () {
             // console.log(response.list[31].main.humidity + "%");
 
             // $(".date4").text(response.list[31].dt_txt);
-            console.log(response.list[31].dt);
+            // console.log(response.list[31].dt);
             var date4 = moment(response.list[31].dt,"X").format("MM/DD/YYYY");
-            console.log(date4);
+            // console.log(date4);
             $(".date4").text(date4);
 
             $(".date4-icon").text(response.list[31].weather[0].icon);
@@ -169,9 +198,9 @@ $(document).ready(function () {
             // console.log(response.list[39].main.humidity + "%");
 
             // $(".date5").text(response.list[39].dt_txt);
-            console.log(response.list[39].dt);
+            // console.log(response.list[39].dt);
             var date5 = moment(response.list[39].dt,"X").format("MM/DD/YYYY");
-            console.log(date5);
+            // console.log(date5);
             $(".date5").text(date5);
 
             $(".date5-icon").text(response.list[39].weather[0].icon);

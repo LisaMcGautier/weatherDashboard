@@ -25,7 +25,7 @@ SO THAT I can plan a trip accordingly
 []WHEN I view current weather conditions for that city
 []THEN I am presented with 
 [X]the city name, 
-[]the date, 
+[X]the date, 
 []an icon representation of weather conditions, 
 [X]the temperature, 
 [X]the humidity, 
@@ -37,7 +37,7 @@ SO THAT I can plan a trip accordingly
 []WHEN I view future weather conditions for that city
 []THEN I am presented with a 
 [X]5-day forecast that displays 
-[]the date, 
+[X]the date, 
 []an icon representation of weather conditions, 
 [X]the temperature, 
 [X]and the humidity
@@ -88,7 +88,7 @@ Created the repo without a readme, because I had already written all of the abov
 
 Added classes to html content, so that I will be able to access each one from `script.js` using JQuery.
 
-Moved the function from `index.html` to `script.js` in order to confirm that it is working.
+Moved the function from `indexBS.html` to `script.js` in order to confirm that it is working.
 
 Worked on the syntax of the JQuery to display the API response results dynamically within the HTML.
 
@@ -110,3 +110,9 @@ Sent date, weather icon, temperature, and humidity results from the console to t
 
 Added the `moment.js` script tag to be able to format the dates.
 Added the current date to the Current City and the future dates to the 5 forecast boxes.
+
+Consulted stack overflow for help with showing the weather icon.
+[https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon].
+
+Added the `img` tag to Current City `indexBS.html` to force the icon to render. Struggled with the correct syntax to dynamically change the image source within `indexBS.html` from `script.js`.
+
