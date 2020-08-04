@@ -20,7 +20,7 @@ SO THAT I can plan a trip accordingly
 [X]WHEN I search for a city
 []THEN I am presented with 
 [X]current and 
-[]future conditions for that city and 
+[X]future conditions for that city and 
 []that city is added to the search history
 []WHEN I view current weather conditions for that city
 []THEN I am presented with 
@@ -39,8 +39,8 @@ SO THAT I can plan a trip accordingly
 [X]5-day forecast that displays 
 []the date, 
 []an icon representation of weather conditions, 
-[]the temperature, 
-[]and the humidity
+[X]the temperature, 
+[X]and the humidity
 []WHEN I click on a city in the search history
 []THEN I am again presented with current and 
 []future conditions for that city
@@ -106,3 +106,7 @@ Navigated through the DOM to retrieve results for the date, icon, temperature, a
 
 Sent date, weather icon, temperature, and humidity results from the console to the HTML 5-day Forecast elements.
 
+8/4
+
+Added the `moment.js` script tag to be able to format the dates.
+Added the current date to the Current City and the future dates to the 5 forecast boxes.
