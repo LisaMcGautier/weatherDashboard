@@ -21,8 +21,8 @@ SO THAT I can plan a trip accordingly
 []THEN I am presented with 
 [X]current and 
 [X]future conditions for that city and 
-[]that city is added to the search history
-[]WHEN I view current weather conditions for that city
+[X]that city is added to the search history
+[X]WHEN I view current weather conditions for that city
 []THEN I am presented with 
 [X]the city name, 
 [X]the date, 
@@ -34,7 +34,7 @@ SO THAT I can plan a trip accordingly
 []WHEN I view the UV index
 []THEN I am presented with a color that indicates whether the conditions are 
 [X]favorable, moderate, or severe
-[]WHEN I view future weather conditions for that city
+[X]WHEN I view future weather conditions for that city
 []THEN I am presented with a 
 [X]5-day forecast that displays 
 [X]the date, 
@@ -117,3 +117,10 @@ Consulted stack overflow for help with showing the weather icon.
 Added the `img` tag to Current City `indexBS.html` to force the icon to render. Struggled with the correct syntax to dynamically change the image source within `indexBS.html` from `script.js`.
 
 Using similar logic, added the weather icons to the Forecast boxes.
+
+Created variables in order to save cities to local storage when the search button is clicked AND retrieve from local storage on page load.
+
+Created a for loop to render the cities saved in local storage as buttons below the search field.
+
+Used `stringify` to convert the `searchHistory` array to a string for local storage.  Used `parse` to read the cities from local storage.
+

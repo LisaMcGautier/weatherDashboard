@@ -1,8 +1,30 @@
 $(document).ready(function () {
-    // getItem last city searched
 
-    // var key="Ex: name, id, etc"; //The key can be any word you want
-    // var valueFromLocalStorage=localStorage.getItem(key);
+    var searchHistory = [];
+
+    // var savedCities = localStorage.getItem("mostRecent");
+
+    var savedCities = JSON.parse(localStorage.getItem("mostRecent"));
+
+    if(savedCities != null) {
+
+        console.log(savedCities);
+
+        for (var i = 0; i < savedCities.length; i++) {
+
+            // make a new button
+            var btn = $("<button>");
+            // button text to saved cities[i]
+            btn.text(savedCities[i]);
+            // add classes to button
+            btn.addClass("list-group-item list-group-item-action");
+            // prepend to list group div
+            $(".list-group").prepend(btn);
+
+        }
+
+    }
+
 
     function getWeather(city) {
         var city;
@@ -285,16 +307,24 @@ $(document).ready(function () {
 
             alert("Please enter a city")
 
-        };
-        
+        };    
+
+        searchHistory.push(city);
+
         // setItem local Storage
 
-        // var searchHistory = [];
-        // searchHistory.push(city);
+        // var mostRecent = city;
+        // var history = searchHistory;
 
-        // var key;
-        // var value;
-        // localStorage.setItem(key,value);
+        // localStorage.setItem("mostRecent", searchHistory);
+
+        localStorage.setItem("mostRecent", JSON.stringify(searchHistory));
+
+
+
+
+
+
 
 
     });
