@@ -125,13 +125,23 @@ $(document).ready(function () {
             // console.log(date1);
             $(".date1").text(date1);
 
-            $(".date1-icon").text(response.list[7].weather[0].icon);
+
+
+            // $(".date1-icon").text(response.list[7].weather[0].icon);
             
-            $(".date1-icon").append(response.list[7].weather[0].icon);
+            var icon1 = $("<img>");
+            var iconcode1 = response.list[7].weather[0].icon;
+            var iconurl1 = "http://openweathermap.org/img/w/" + iconcode1 + ".png";
+            
+            icon1.attr("src", iconurl1);
+            icon1.attr("alt", "Weather Icon");
+
+            $(".date1-icon").html(icon1);
 
             $(".date1-temp").text("Temp: " + (Math.round(((response.list[7].main.temp - 273.15) * 1.80) + 32)) + " °F");
 
             $(".date1-hum").text("Hum: " + response.list[7].main.humidity + " %");
+
 
 
             // console.log(response.list[15]);
@@ -146,12 +156,25 @@ $(document).ready(function () {
             // console.log(date2);
             $(".date2").text(date2);
 
-            $(".date2-icon").text(response.list[15].weather[0].icon);
+
+
+            // $(".date2-icon").text(response.list[15].weather[0].icon);
+
+            var icon2 = $("<img>");
+            var iconcode2 = response.list[15].weather[0].icon;
+            var iconurl2 = "http://openweathermap.org/img/w/" + iconcode2 + ".png";
+            
+            icon2.attr("src", iconurl2);
+            icon2.attr("alt", "Weather Icon");
+
+            $(".date2-icon").html(icon2);
+
+
 
             $(".date2-temp").text("Temp: " + (Math.round(((response.list[15].main.temp - 273.15) * 1.80) + 32)) + " °F");
 
             $(".date2-hum").text("Hum: " + response.list[15].main.humidity + " %");
-
+           
 
             // console.log(response.list[23]);
             // console.log(response.list[23].dt_txt);
@@ -165,7 +188,20 @@ $(document).ready(function () {
             // console.log(date3);
             $(".date3").text(date3);
 
-            $(".date3-icon").text(response.list[23].weather[0].icon);
+
+
+            // $(".date3-icon").text(response.list[23].weather[0].icon);
+            
+            var icon3= $("<img>");
+            var iconcode3 = response.list[23].weather[0].icon;
+            var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
+            
+            icon3.attr("src", iconurl3);
+            icon3.attr("alt", "Weather Icon");
+
+            $(".date3-icon").html(icon3);
+
+
 
             $(".date3-temp").text("Temp: " + (Math.round(((response.list[23].main.temp - 273.15) * 1.80) + 32)) + " °F");
 
@@ -184,7 +220,20 @@ $(document).ready(function () {
             // console.log(date4);
             $(".date4").text(date4);
 
-            $(".date4-icon").text(response.list[31].weather[0].icon);
+
+
+            // $(".date4-icon").text(response.list[31].weather[0].icon);
+
+            var icon4= $("<img>");
+            var iconcode4 = response.list[31].weather[0].icon;
+            var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
+            
+            icon4.attr("src", iconurl4);
+            icon4.attr("alt", "Weather Icon");
+
+            $(".date4-icon").html(icon4);
+
+
 
             $(".date4-temp").text("Temp: " + (Math.round(((response.list[31].main.temp - 273.15) * 1.80) + 32)) + " °F");
 
@@ -203,7 +252,20 @@ $(document).ready(function () {
             // console.log(date5);
             $(".date5").text(date5);
 
-            $(".date5-icon").text(response.list[39].weather[0].icon);
+
+
+            // $(".date5-icon").text(response.list[39].weather[0].icon);
+
+            var icon5= $("<img>");
+            var iconcode5 = response.list[39].weather[0].icon;
+            var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
+            
+            icon5.attr("src", iconurl5);
+            icon5.attr("alt", "Weather Icon");
+
+            $(".date5-icon").html(icon5);
+
+
 
             $(".date5-temp").text("Temp: " + (Math.round(((response.list[39].main.temp - 273.15) * 1.80) + 32)) + " °F");
 

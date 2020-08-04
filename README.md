@@ -15,7 +15,7 @@ SO THAT I can plan a trip accordingly
 ## Acceptance Criteria
 
 ```
-[X]GIVEN a weather dashboard with 
+[]GIVEN a weather dashboard with 
 [X]form input(s)?
 [X]WHEN I search for a city
 []THEN I am presented with 
@@ -26,7 +26,7 @@ SO THAT I can plan a trip accordingly
 []THEN I am presented with 
 [X]the city name, 
 [X]the date, 
-[]an icon representation of weather conditions, 
+[X]an icon representation of weather conditions, 
 [X]the temperature, 
 [X]the humidity, 
 [X]the wind speed, 
@@ -38,7 +38,7 @@ SO THAT I can plan a trip accordingly
 []THEN I am presented with a 
 [X]5-day forecast that displays 
 [X]the date, 
-[]an icon representation of weather conditions, 
+[X]an icon representation of weather conditions, 
 [X]the temperature, 
 [X]and the humidity
 []WHEN I click on a city in the search history
@@ -116,3 +116,4 @@ Consulted stack overflow for help with showing the weather icon.
 
 Added the `img` tag to Current City `indexBS.html` to force the icon to render. Struggled with the correct syntax to dynamically change the image source within `indexBS.html` from `script.js`.
 
+Using similar logic, added the weather icons to the Forecast boxes.
