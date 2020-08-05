@@ -142,4 +142,10 @@ Not really using `style.css`, but fixed the alignment.
 Cleaned up old code for the forecast boxes.
 Commented on `indexBS.html` and `script.js` to explain the code.  Added a class `dashboard` to the navbar and to `style.css` to increase the font size.
 
-Discovered that once the UV Index backgound color changed to red, it would not change back to green or yellow.  Wrote a line before the if statement to clear any previoous background color.
+Discovered that once the UV Index backgound color changed to red, it would not change back to green or yellow.  Wrote a line before the if statement to clear any previous background color.
+
+Also removed the class for the text color, so that it will be white if the background is red or green, and dark if the background is yellow.
+
+Googled the location with the lowest UV Index in the world; Port Stanley.  Open Weather Maps API returns the name as "Stanley", but also recognizes Stanley as a city in Great Britain.
+
+ 

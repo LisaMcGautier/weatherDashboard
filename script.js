@@ -83,10 +83,7 @@ $(document).ready(function () {
             // Create a function to process the UV data from the API call
             }).then(function (response) {
                 // Clear any previous background class from the UV Index class
-                $(".uvi").removeClass("bg-success bg-warning bg-danger");
-                // $(".uvi").css("background", "white");
-                // $(".uvi").removeClass();
-                // $(".uvi").css("background", "transparent");
+                $(".uvi").removeClass("bg-success bg-warning bg-danger text-white text-dark");
                 // Change the text of the uvi <p> tag from html
                 $(".uvi").text("UV Index: " + response.value);
 
@@ -97,7 +94,7 @@ $(document).ready(function () {
                     // OR if the UV Index is greater than 3 BUT less than 8
                 } else if (response.value >= 3 && response.value < 8) {
                     // Change the background color to yellow
-                    $(".uvi").addClass("bg-warning");
+                    $(".uvi").addClass("bg-warning text-dark");
                     // (IF the UV Index is greater than 8)
                 } else if (response.value > 8){
                     // Change the background to red and the text color to white
