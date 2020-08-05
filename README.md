@@ -128,3 +128,5 @@ Created function `showHistory` to show previously searched cities from local sto
 
 Changed all `http` to`https` so that links will work via github.
 
+Deleted old lines of code that have been commented out.
+
