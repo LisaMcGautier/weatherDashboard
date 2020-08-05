@@ -138,3 +138,8 @@ Created a loop to build the five boxes of the 5-day Forecast. This helps to DRY 
 
 Also created a backup of the old `script.js`, just in case.
 Not really using `style.css`, but fixed the alignment.
+
+Cleaned up old code for the forecast boxes.
+Commented on `indexBS.html` and `script.js` to explain the code.  Added a class `dashboard` to the navbar and to `style.css` to increase the font size.
+
+Discovered that once the UV Index backgound color changed to red, it would not change back to green or yellow.  Wrote a line before the if statement to clear any previoous background color.
