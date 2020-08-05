@@ -15,15 +15,15 @@ SO THAT I can plan a trip accordingly
 ## Acceptance Criteria
 
 ```
-[]GIVEN a weather dashboard with 
+GIVEN a weather dashboard with 
 [X]form input(s)?
 [X]WHEN I search for a city
-[]THEN I am presented with 
+THEN I am presented with 
 [X]current and 
 [X]future conditions for that city and 
 [X]that city is added to the search history
 [X]WHEN I view current weather conditions for that city
-[]THEN I am presented with 
+THEN I am presented with 
 [X]the city name, 
 [X]the date, 
 [X]an icon representation of weather conditions, 
@@ -31,21 +31,21 @@ SO THAT I can plan a trip accordingly
 [X]the humidity, 
 [X]the wind speed, 
 [X]and the UV index
-[]WHEN I view the UV index
-[]THEN I am presented with a color that indicates whether the conditions are 
+WHEN I view the UV index
+THEN I am presented with a color that indicates whether the conditions are 
 [X]favorable, moderate, or severe
 [X]WHEN I view future weather conditions for that city
-[]THEN I am presented with a 
+THEN I am presented with a 
 [X]5-day forecast that displays 
 [X]the date, 
 [X]an icon representation of weather conditions, 
 [X]the temperature, 
 [X]and the humidity
-[]WHEN I click on a city in the search history
-[]THEN I am again presented with current and 
-[]future conditions for that city
-[]WHEN I open the weather dashboard
-[]THEN I am presented with the last searched city forecast
+[X]WHEN I click on a city in the search history
+[X]THEN I am again presented with current and 
+[X]future conditions for that city
+[X]WHEN I open the weather dashboard
+[X]THEN I am presented with the last searched city forecast
 ```
 
 The following image demonstrates the application functionality:
@@ -79,7 +79,7 @@ Created a function to retrieve weather conditions for the city from the user inp
 
 At first, only the weather conditions for Moscow were logging to the console.  Discovered that the example url from the openweathermap documentation included the city code for Moscow (524901) hard-coded in the query.
 
-Changed the API call from http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={YOUR API KEY} to http://api.openweathermap.org/data/2.5/weather?q= + city + &APPID={YOUR API KEY}.
+Changed the API call from https://api.openweathermap.org/data/2.5/forecast?id=524901&APPID={YOUR API KEY} to https://api.openweathermap.org/data/2.5/weather?q= + city + &APPID={YOUR API KEY}.
 
 Adventures with github...
 Created the repo without a readme, because I had already written all of the above.  Committed a folder within a folder, and then had to delete the repo, create a new one, and re-commit the files without a folder.  Lesson learned!
@@ -123,4 +123,8 @@ Created variables in order to save cities to local storage when the search butto
 Created a for loop to render the cities saved in local storage as buttons below the search field.
 
 Used `stringify` to convert the `searchHistory` array to a string for local storage.  Used `parse` to read the cities from local storage.
+
+Created function `showHistory` to show previously searched cities from local storage when the page loads and add cites to search history when the search button is clicked.
+
+Changed all `http` to`https` so that links will work via github.
 
