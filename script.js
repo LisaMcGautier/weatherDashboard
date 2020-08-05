@@ -1,8 +1,14 @@
 $(document).ready(function () {
 
     var searchHistory = [];
-    
+  
     showHistory();
+
+    if(searchHistory.length > 0) {
+
+        getWeather(searchHistory[searchHistory.length - 1]);
+
+    }
 
     function showHistory () {
 
@@ -25,7 +31,7 @@ $(document).ready(function () {
                 // add classes to button
                 btn.addClass("list-group-item list-group-item-action");
                 // prepend to list group div
-                $(".list-group").prepend(btn);
+                $(".list-group").append(btn);
 
                 // add event listener
                 btn.on("click", function () {
@@ -57,15 +63,15 @@ $(document).ready(function () {
 
             var icon = $("<img>");
 
-            var iconcode = response.weather[0].icon;
-            var iconurl = "https://openweathermap.org/img/w/" + iconcode + ".png";
+            var iconCode = response.weather[0].icon;
+            var iconURL = "https://openweathermap.org/img/w/" + iconCode + ".png";
 
-            icon.attr("src", iconurl);
+            icon.attr("src", iconURL);
 
-            // console.log(iconcode);
-            // console.log(iconurl);
+            // console.log(iconCode);
+            // console.log(iconURL);
 
-            $(".city").html(response.name + " (" + date + ") " + "<img id='iconurl' src='" + iconurl + "'>");
+            $(".city").html(response.name + " (" + date + ") " + "<img id='iconURL' src='" + iconURL + "'>");
 
             $(".temp").text("Temperature: " + (Math.round(((response.main.temp - 273.15) * 1.80) + 32)) + " °F");
 
@@ -125,10 +131,10 @@ $(document).ready(function () {
             $(".date1").text(date1);
 
             var icon1 = $("<img>");
-            var iconcode1 = response.list[7].weather[0].icon;
-            var iconurl1 = "https://openweathermap.org/img/w/" + iconcode1 + ".png";
+            var iconCode1 = response.list[7].weather[0].icon;
+            var iconURL1 = "https://openweathermap.org/img/w/" + iconCode1 + ".png";
 
-            icon1.attr("src", iconurl1);
+            icon1.attr("src", iconURL1);
             icon1.attr("alt", "Weather Icon");
 
             $(".date1-icon").html(icon1);
@@ -143,10 +149,10 @@ $(document).ready(function () {
             $(".date2").text(date2);
 
             var icon2 = $("<img>");
-            var iconcode2 = response.list[15].weather[0].icon;
-            var iconurl2 = "https://openweathermap.org/img/w/" + iconcode2 + ".png";
+            var iconCode2 = response.list[15].weather[0].icon;
+            var iconURL2 = "https://openweathermap.org/img/w/" + iconCode2 + ".png";
 
-            icon2.attr("src", iconurl2);
+            icon2.attr("src", iconURL2);
             icon2.attr("alt", "Weather Icon");
 
             $(".date2-icon").html(icon2);
@@ -161,10 +167,10 @@ $(document).ready(function () {
             $(".date3").text(date3);
 
             var icon3 = $("<img>");
-            var iconcode3 = response.list[23].weather[0].icon;
-            var iconurl3 = "https://openweathermap.org/img/w/" + iconcode3 + ".png";
+            var iconCode3 = response.list[23].weather[0].icon;
+            var iconURL3 = "https://openweathermap.org/img/w/" + iconCode3 + ".png";
 
-            icon3.attr("src", iconurl3);
+            icon3.attr("src", iconURL3);
             icon3.attr("alt", "Weather Icon");
 
             $(".date3-icon").html(icon3);
@@ -179,10 +185,10 @@ $(document).ready(function () {
             $(".date4").text(date4);
 
             var icon4 = $("<img>");
-            var iconcode4 = response.list[31].weather[0].icon;
-            var iconurl4 = "https://openweathermap.org/img/w/" + iconcode4 + ".png";
+            var iconCode4 = response.list[31].weather[0].icon;
+            var iconURL4 = "https://openweathermap.org/img/w/" + iconCode4 + ".png";
 
-            icon4.attr("src", iconurl4);
+            icon4.attr("src", iconURL4);
             icon4.attr("alt", "Weather Icon");
 
             $(".date4-icon").html(icon4);
@@ -197,10 +203,10 @@ $(document).ready(function () {
             $(".date5").text(date5);
 
             var icon5 = $("<img>");
-            var iconcode5 = response.list[39].weather[0].icon;
-            var iconurl5 = "https://openweathermap.org/img/w/" + iconcode5 + ".png";
+            var iconCode5 = response.list[39].weather[0].icon;
+            var iconURL5 = "https://openweathermap.org/img/w/" + iconCode5 + ".png";
 
-            icon5.attr("src", iconurl5);
+            icon5.attr("src", iconURL5);
             icon5.attr("alt", "Weather Icon");
 
             $(".date5-icon").html(icon5);

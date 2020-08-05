@@ -130,3 +130,5 @@ Changed all `http` to`https` so that links will work via github.
 
 Deleted old lines of code that have been commented out.
 
+Created an `if` statement to evaluate the length of the array `searchHistory` so that the most recent city searched will be displayed when the page loads.
+
