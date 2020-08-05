@@ -1,11 +1,11 @@
 .col-1 {
-    border: solid 1px;
-    min-height: 50px;
-  }
+  border: solid 1px;
+  min-height: 50px;
+}
 
-  .col-2 {
-    margin: 10px;
-    border: solid 1px;
-    min-height: 50px;
-  }
+.col-2 {
+  margin: 10px;
+  border: solid 1px;
+  min-height: 50px;
+}
 

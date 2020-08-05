@@ -132,3 +132,9 @@ Deleted old lines of code that have been commented out.
 
 Created an `if` statement to evaluate the length of the array `searchHistory` so that the most recent city searched will be displayed when the page loads.
 
+8/5
+
+Created a loop to build the five boxes of the 5-day Forecast. This helps to DRY up the repetitive code.
+
+Also created a backup of the old `script.js`, just in case.
+Not really using `style.css`, but fixed the alignment.
