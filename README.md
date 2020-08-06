@@ -148,9 +148,4 @@ Also removed the class for the text color, so that it will be white if the backg
 
 Googled the location with the lowest UV Index in the world; Port Stanley.  Open Weather Maps API returns the name as "Stanley", but also recognizes Stanley as a city in Great Britain.
 
-![Screenshot (28)](https://user-images.githubusercontent.com/62854999/89463275-b1401d00-d73c-11ea-8de5-0fe546a69dab.png)
-![Screenshot (29)](https://user-images.githubusercontent.com/62854999/89463284-b43b0d80-d73c-11ea-9da8-a55d4209717f.png)
-![Screenshot (30)](https://user-images.githubusercontent.com/62854999/89463296-b7ce9480-d73c-11ea-8fe0-2a3aee226ab1.png)
-
- https://github.com/LisaMcGautier/weatherDashboard
- https://lisamcgautier.github.io/weatherDashboard/
+App is not loading from github. Changed `index.html` to `OLDindex.html` and the working HTML file from `indexBS.html` to `index.html`.
